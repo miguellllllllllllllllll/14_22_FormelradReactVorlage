@@ -11,6 +11,14 @@ export default function Formelrad() {
     p: ""
   });
 
+  const [colors, setColors] = useState({
+    u: "black",
+    i: "black",
+    r: "black",
+    p: "black",
+    message: "red"
+  });
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("handleSubmit");
@@ -74,25 +82,25 @@ export default function Formelrad() {
         </header>
         <form onSubmit={handleSubmit}>
           <InputField
-            color={"black"}
+            color={colors.u}
             value={values.u}
             label="Spannung"
             handleChange={e => setValues(values => ({ ...values, u: e.target.value }))}
           />
           <InputField
-            color={"black"}
+            color={colors.i}
             value={values.i}
             label="Stromstärke"
             handleChange={e => setValues(values => ({ ...values, i: e.target.value }))}
           />
           <InputField
-            color={"black"}
+            color={colors.r}
             value={values.r}
             label="Widerstand"
             handleChange={e => setValues(values => ({ ...values, r: e.target.value }))}
           />
           <InputField
-            color={"black"}
+            color={colors.p}
             value={values.p}
             label="Leistung"
             handleChange={e => setValues(values => ({ ...values, p: e.target.value }))}
