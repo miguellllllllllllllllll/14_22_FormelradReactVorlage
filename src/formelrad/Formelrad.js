@@ -19,9 +19,14 @@ export default function Formelrad() {
     message: "red"
   });
 
+  function resetColors() {
+    setColors(colors => ({ ...colors, u: "black", i: "black", r: "black", p: "black" }));
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("handleSubmit");
+    resetColors();
 
     if (values.u === "" && values.i === "") {
       /* calculate u and i */
