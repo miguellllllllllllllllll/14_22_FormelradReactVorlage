@@ -99,7 +99,9 @@ export default function Formelrad() {
         <header>
           <h2>Formelrad</h2>
           <img src={formelrad} width="200" alt="Formelrad" />
+          <p>Zwei Werte eingeben, die anderen werden berechnet.</p>
         </header>
+
         <form onSubmit={handleSubmit}>
           <InputField
             color={colors.u}
